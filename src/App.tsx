@@ -7,7 +7,7 @@ import LicenseLogs from '@/components/LicenseLogs';
 import { Toaster } from '@/components/ui/sonner';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { AlertCircle } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
