@@ -1,0 +1,5 @@
+{
+  "name": "License Admin Dashboard",
+  "description": "A secure admin dashboard for managing license keys and viewing logs, integrated with Supabase.",
+  "requestFramePermissions": []
+}
