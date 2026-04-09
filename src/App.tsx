@@ -4,7 +4,7 @@ import Login from '@/components/Login';
 import Sidebar from '@/components/Sidebar';
 import LicenseKeys from '@/components/LicenseKeys';
 import LicenseLogs from '@/components/LicenseLogs';
-import { Toaster } from '@/components/ui/sonner';
+import { Toaster } from '@/components/ui/ui-sonner';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { AlertCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/ui-card';

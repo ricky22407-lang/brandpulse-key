@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/ui-card';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/ui-input';
+import { Button } from '@/components/ui/ui-button';
+import { Label } from '@/components/ui/ui-label';
 import { Lock, User } from 'lucide-react';
 import { toast } from 'sonner';
 
