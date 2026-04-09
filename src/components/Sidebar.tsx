@@ -1,6 +1,6 @@
 import { Key, History, LogOut, LayoutDashboard } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button.tsx';
+import { Button } from '@/components/ui/button';
 
 interface SidebarProps {
   activeTab: 'keys' | 'logs';

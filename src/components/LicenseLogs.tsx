@@ -7,17 +7,17 @@ import {
   TableHead, 
   TableHeader, 
   TableRow 
-} from '@/components/ui/table.tsx';
+} from '@/components/ui/table';
 import { 
   Card, 
   CardContent, 
   CardHeader, 
   CardTitle 
-} from '@/components/ui/card.tsx';
-import { Badge } from '@/components/ui/badge.tsx';
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { RefreshCw, Search, ShieldCheck, ShieldAlert } from 'lucide-react';
-import { Button } from '@/components/ui/button.tsx';
-import { Input } from '@/components/ui/input.tsx';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { format } from 'date-fns';
 import { toast } from 'sonner';
 
