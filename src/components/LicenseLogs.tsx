@@ -13,7 +13,7 @@ import {
   CardContent, 
   CardHeader, 
   CardTitle 
-} from '@/components/ui/Card';
+} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { RefreshCw, Search, ShieldCheck, ShieldAlert } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -114,8 +114,8 @@ export default function LicenseLogs() {
                     </TableCell>
                   </TableRow>
                 ) : (
-                  filteredLogs.map((log) => (
-                    <TableRow key={log.id}>
+                  filteredLogs.map((log, index) => (
+                    <TableRow key={log.id || index}>
                       <TableCell className="text-zinc-600 text-sm">
                         {format(new Date(log.created_at), 'MMM dd, HH:mm:ss')}
                       </TableCell>

@@ -15,7 +15,7 @@ import {
   CardDescription, 
   CardHeader, 
   CardTitle 
-} from '@/components/ui/Card';
+} from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -152,11 +152,9 @@ export default function LicenseKeys() {
             <RefreshCw className={cn("h-4 w-4", isLoading && "animate-spin")} />
           </Button>
           <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
-            <DialogTrigger asChild>
-              <Button className="bg-blue-600 hover:bg-blue-700">
-                <Plus className="h-4 w-4 mr-2" />
-                Generate Key
-              </Button>
+            <DialogTrigger render={<Button className="bg-blue-600 hover:bg-blue-700" />}>
+              <Plus className="h-4 w-4 mr-2" />
+              Generate Key
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
@@ -240,8 +238,8 @@ export default function LicenseKeys() {
                     </TableCell>
                   </TableRow>
                 ) : (
-                  filteredKeys.map((key) => (
-                    <TableRow key={key.id}>
+                  filteredKeys.map((key, index) => (
+                    <TableRow key={key.id || key.key || index}>
                       <TableCell className="font-medium">{key.client_name}</TableCell>
                       <TableCell>
                         <div className="flex items-center gap-2">
