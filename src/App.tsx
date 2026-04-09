@@ -3,10 +3,10 @@ import Login from './components/Login';
 import Sidebar from './components/Sidebar';
 import LicenseKeys from './components/LicenseKeys';
 import LicenseLogs from './components/LicenseLogs';
-import { Toaster } from '@/components/ui/sonner';
+import { Toaster } from '@/components/ui/sonner.tsx';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { AlertCircle } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.tsx';
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
