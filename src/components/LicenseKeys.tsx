@@ -167,8 +167,8 @@ export default function LicenseKeys() {
   };
 
   const filteredKeys = keys.filter(k =>
-    k.client_name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    k.key.toLowerCase().includes(searchQuery.toLowerCase())
+    (k.client_name ?? "").toLowerCase().includes(searchQuery.toLowerCase()) ||
+    (k.key ?? "").toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
