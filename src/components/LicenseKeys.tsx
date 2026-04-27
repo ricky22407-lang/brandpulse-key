@@ -147,15 +147,15 @@ export default function LicenseKeys() {
     }
   };
 
-  const toggleStatus = async (id: string, currentStatus: boolean) => {
+  const toggleStatus = async (keyValue: string, currentStatus: boolean) => {
     try {
       const { error } = await supabase
         .from('license_keys')
         .update({ is_active: !currentStatus })
-        .eq('id', id);
+        .eq('key', keyValue);
       if (error) throw error;
       toast.success(`Key ${!currentStatus ? 'activated' : 'deactivated'} successfully`);
-      setKeys(keys.map(k => k.id === id ? { ...k, is_active: !currentStatus } : k));
+      setKeys(keys.map(k => k.key === keyValue ? { ...k, is_active: !currentStatus } : k));
     } catch (error: any) {
       toast.error('Failed to update status: ' + error.message);
     }
@@ -305,7 +305,7 @@ export default function LicenseKeys() {
                         <Button
                           variant="ghost" size="sm"
                           className={cn("h-8 w-8 p-0", key.is_active ? "text-red-500 hover:text-red-600 hover:bg-red-50" : "text-green-500 hover:text-green-600 hover:bg-green-50")}
-                          onClick={() => toggleStatus(key.id, key.is_active)}
+                          onClick={() => toggleStatus(key.key, key.is_active)}
                         >
                           <Power className="h-4 w-4" />
                         </Button>
